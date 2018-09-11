@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5770a60d-ed83-4a03-9803-2dcb34c40c4d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fetchdata.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datapersistence.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/processingdata.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NODE_ID_CONTENT.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/REPOSITORY_STARGAZERS.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/USER_STAR_REPOSITORIES.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fetchdata.py" beforeDir="false" afterPath="$PROJECT_DIR$/fetchdata.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,37 +17,41 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/FuckFakeGitHubStars$fetchdata.coverage" NAME="fetchdata Coverage Results" MODIFIED="1536674649569" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/FuckFakeGitHubStars$fetchdata.coverage" NAME="fetchdata Coverage Results" MODIFIED="1536682069876" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/FuckFakeGitHubStars$processingdata.coverage" NAME="processingdata Coverage Results" MODIFIED="1536679780807" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="1172614339">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
           <entry key="project.open.time.0" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.11" value="1" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="14" />
+          <entry key="json" value="1" />
+          <entry key="py" value="18" />
           <entry key="token" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
+          <entry key="JSON" value="1" />
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Python" value="14" />
+          <entry key="Python" value="18" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Python Console" value="21" />
-          <entry key="py" value="3544" />
+          <entry key="py" value="4151" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="3565" />
+          <entry key="Python" value="4172" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
@@ -54,19 +61,50 @@
     <favorites_list name="FuckFakeGitHubStars" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/fetchdata.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="127" column="38" selection-start-line="127" selection-start-column="38" selection-end-line="127" selection-end-column="38" />
+            <state relative-caret-position="146">
+              <caret line="44" column="25" selection-start-line="44" selection-start-column="25" selection-end-line="44" selection-end-column="25" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
-                <marker date="1536629136412" expanded="true" signature="139:205" ph="..." />
-                <marker date="1536629136412" expanded="true" signature="888:2394" ph="..." />
-                <marker date="1536629136412" expanded="true" signature="2883:2914" ph="..." />
-                <marker date="1536629136412" expanded="true" signature="6082:6375" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/datapersistence.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1080">
+              <caret line="45" column="24" selection-start-line="45" selection-start-column="24" selection-end-line="45" selection-end-column="24" />
+              <folding>
+                <element signature="e#0#14#0" expanded="true" />
+                <marker date="1536681973060" expanded="true" signature="40:225" ph="..." />
+                <marker date="1536681973060" expanded="true" signature="529:773" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/processingdata.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="288">
+              <caret line="12" column="16" selection-start-line="7" selection-start-column="4" selection-end-line="12" selection-end-column="16" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file:///usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python3.6/codecs.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="427">
+              <caret line="310" selection-start-line="310" selection-end-line="310" />
             </state>
           </provider>
         </entry>
@@ -74,7 +112,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file:///usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python3.6/json/decoder.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
+            <state relative-caret-position="8496">
               <caret line="356" selection-start-line="356" selection-end-line="356" />
             </state>
           </provider>
@@ -90,18 +128,9 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Library/Caches/PyCharm2018.2/python_stubs/1025205290/builtins.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2694">
-              <caret line="341" column="4" selection-start-line="341" selection-start-column="4" selection-end-line="341" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file:///usr/local/lib/python3.6/site-packages/requests/sessions.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="920">
+            <state relative-caret-position="16296">
               <caret line="706" selection-start-line="706" selection-end-line="706" />
             </state>
           </provider>
@@ -110,7 +139,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="305">
+            <state relative-caret-position="39912">
               <caret line="1663" selection-start-line="1663" selection-end-line="1663" />
             </state>
           </provider>
@@ -119,7 +148,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file:///usr/local/lib/python3.6/site-packages/requests/api.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="254">
+            <state relative-caret-position="1392">
               <caret line="58" selection-start-line="58" selection-end-line="58" />
             </state>
           </provider>
@@ -150,11 +179,15 @@
       <find>owner</find>
       <find>json</find>
       <find>fetch_id_from_edge</find>
-      <find>save</find>
       <find>cocoadebug</find>
       <find>bfs current level:</find>
       <find>print</find>
       <find>level:2</find>
+      <find>data</find>
+      <find>save</find>
+      <find>load_d</find>
+      <find>REPOSITORY_STARGAZERS</find>
+      <find>fd.</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -164,6 +197,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/token" />
+        <option value="$PROJECT_DIR$/processingdata.py" />
+        <option value="$PROJECT_DIR$/datapersistence.py" />
         <option value="$PROJECT_DIR$/fetchdata.py" />
       </list>
     </option>
@@ -233,7 +268,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.fetchdata">
     <configuration name="fetchdata" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="FuckFakeGitHubStars" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -256,9 +291,36 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="processingdata" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="FuckFakeGitHubStars" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/processingdata.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.fetchdata" />
+      <item itemvalue="Python.processingdata" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.fetchdata" />
+        <item itemvalue="Python.processingdata" />
       </list>
     </recent_temporary>
   </component>
@@ -277,28 +339,29 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Favorites" sideWeight="0.50120485" side_tool="true" weight="0.24964234" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49879518" visible="true" weight="0.24964234" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49879518" visible="true" weight="0.2532189" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Python Console" weight="0.32891566" />
-      <window_info anchor="bottom" id="Terminal" weight="0.32891566" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" weight="0.32891566" />
+      <window_info id="Favorites" order="2" sideWeight="0.50120485" side_tool="true" weight="0.24964234" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.42627013" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32961586" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.35935563" />
       <window_info anchor="bottom" x="0" y="590" width="1398" height="175" id="Debug" order="3" weight="0.24783148" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="SciView" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.32891566" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32891566" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.32891566" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -309,6 +372,28 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/processingdata.py</url>
+          <line>11</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/processingdata.py</url>
+          <line>8</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/datapersistence.py</url>
+          <line>32</line>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/fetchdata.py</url>
+          <line>85</line>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+      </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
           <properties notifyOnTerminate="true" exception="BaseException">
@@ -358,38 +443,10 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file:///usr/local/lib/python3.6/site-packages/requests/api.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="58" selection-start-line="58" selection-end-line="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="1663" selection-start-line="1663" selection-end-line="1663" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/lib/python3.6/site-packages/requests/sessions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="920">
-          <caret line="706" selection-start-line="706" selection-end-line="706" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
           <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python3.6/codecs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="316" lean-forward="true" selection-start-line="316" selection-end-line="316" />
         </state>
       </provider>
     </entry>
@@ -398,17 +455,55 @@
         <state relative-caret-position="-25" />
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Library/Caches/PyCharm2018.2/python_stubs/1025205290/builtins.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2694">
-          <caret line="341" column="4" selection-start-line="341" selection-start-column="4" selection-end-line="341" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python3.6/queue.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2448">
           <caret line="114" column="8" selection-start-line="114" selection-start-column="8" selection-end-line="114" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/USER_STAR_REPOSITORIES.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file:///usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python3.6/json/decoder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8496">
+          <caret line="356" selection-start-line="356" selection-end-line="356" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python3.6/site-packages/requests/sessions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16296">
+          <caret line="706" selection-start-line="706" selection-end-line="706" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="39912">
+          <caret line="1663" selection-start-line="1663" selection-end-line="1663" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python3.6/site-packages/requests/api.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1392">
+          <caret line="58" selection-start-line="58" selection-end-line="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python3.6/codecs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="427">
+          <caret line="310" selection-start-line="310" selection-end-line="310" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Caches/PyCharm2018.2/python_stubs/1025205290/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="111" column="4" selection-start-line="111" selection-start-column="4" selection-end-line="111" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -419,23 +514,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python3.6/json/decoder.py">
+    <entry file="file://$USER_HOME$/Library/Caches/PyCharm2018.2/python_stubs/1025205290/posix.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="356" selection-start-line="356" selection-end-line="356" />
+        <state relative-caret-position="84">
+          <caret line="629" column="4" selection-start-line="629" selection-start-column="4" selection-end-line="629" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/processingdata.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="12" column="16" selection-start-line="7" selection-start-column="4" selection-end-line="12" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/datapersistence.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1080">
+          <caret line="45" column="24" selection-start-line="45" selection-start-column="24" selection-end-line="45" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+            <marker date="1536681973060" expanded="true" signature="40:225" ph="..." />
+            <marker date="1536681973060" expanded="true" signature="529:773" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/fetchdata.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="127" column="38" selection-start-line="127" selection-start-column="38" selection-end-line="127" selection-end-column="38" />
+        <state relative-caret-position="146">
+          <caret line="44" column="25" selection-start-line="44" selection-start-column="25" selection-end-line="44" selection-end-column="25" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
-            <marker date="1536629136412" expanded="true" signature="139:205" ph="..." />
-            <marker date="1536629136412" expanded="true" signature="888:2394" ph="..." />
-            <marker date="1536629136412" expanded="true" signature="2883:2914" ph="..." />
-            <marker date="1536629136412" expanded="true" signature="6082:6375" ph="..." />
           </folding>
         </state>
       </provider>

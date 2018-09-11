@@ -1,9 +1,10 @@
 import requests
-import json
 import queue
+import datapersistence as dp
 
 GITHUB_API_URL = 'https://api.github.com/graphql'
 TOKEN = ''
+SEARCH_NODE_ID = 'MDEwOlJlcG9zaXRvcnkxMTc1MTM4NTI='
 
 
 def load_token():
@@ -21,22 +22,17 @@ def run_query(query):
         raise Exception("Query failed to run by returning code of {}. {}".format(request.status_code, query))
 
 
-REPOSITORY_STARGAZERS = {}
-USER_STAR_REPOSITORIES = {}
-NODE_ID_CONTENT = {}
-
-
 def get_user_stars(node_id):
 
-    if node_id not in NODE_ID_CONTENT:
+    if node_id not in dp.NODE_ID_CONTENT:
         get_node_content(node_id)
 
-    node_content = NODE_ID_CONTENT[node_id]
+    node_content = dp.NODE_ID_CONTENT[node_id]
     if 'login' not in node_content:
         return None
 
-    if node_id in USER_STAR_REPOSITORIES:
-        return USER_STAR_REPOSITORIES[node_id]
+    if node_id in dp.USER_STAR_REPOSITORIES:
+        return dp.USER_STAR_REPOSITORIES[node_id]
 
     next_cursor = ''
     has_next = True
@@ -44,7 +40,7 @@ def get_user_stars(node_id):
 
     def fetch_id_from_edge(edge):
         node = edge['node']
-        NODE_ID_CONTENT[node['id']] = {'owner': node['owner']['login'],
+        dp.NODE_ID_CONTENT[node['id']] = {'owner': node['owner']['login'],
                                        'name': node['name']}
         return node['id']
 
@@ -80,22 +76,22 @@ def get_user_stars(node_id):
             next_cursor = ', after: \"' + page_info['endCursor'] + '\"'
             has_next = page_info['hasNextPage']
 
-    USER_STAR_REPOSITORIES[node_id] = all_star_repos
-    save_data()
+    dp.USER_STAR_REPOSITORIES[node_id] = all_star_repos
+    dp.save_data(SEARCH_NODE_ID)
     return all_star_repos
 
 
 def get_repo_stargazers(node_id):
 
-    if node_id not in NODE_ID_CONTENT:
+    if node_id not in dp.NODE_ID_CONTENT:
         get_node_content(node_id)
 
-    node_content = NODE_ID_CONTENT[node_id]
+    node_content = dp.NODE_ID_CONTENT[node_id]
     if 'owner' not in node_content:
         return None
 
-    if node_id in REPOSITORY_STARGAZERS:
-        return REPOSITORY_STARGAZERS[node_id]
+    if node_id in dp.REPOSITORY_STARGAZERS:
+        return dp.REPOSITORY_STARGAZERS[node_id]
 
     next_cursor = ''
     has_next = True
@@ -103,7 +99,7 @@ def get_repo_stargazers(node_id):
 
     def fetch_id_from_edge(edge):
         node = edge['node']
-        NODE_ID_CONTENT[node['id']] = {'login': node['login']}
+        dp.NODE_ID_CONTENT[node['id']] = {'login': node['login']}
         return node['id']
 
     while has_next:
@@ -135,8 +131,8 @@ def get_repo_stargazers(node_id):
             next_cursor = ', after: \"' + page_info['endCursor'] + '\"'
             has_next = page_info['hasNextPage']
 
-    REPOSITORY_STARGAZERS[node_id] = all_stargazers
-    save_data()
+    dp.REPOSITORY_STARGAZERS[node_id] = all_stargazers
+    dp.save_data(SEARCH_NODE_ID)
     return all_stargazers
 
 
@@ -159,10 +155,10 @@ def get_node_content(node_id):
     response = run_query(query_ql)
     node = response['data']['node']
     if 'owner' in node and 'name' in node:
-        NODE_ID_CONTENT[node_id] = {'owner': node['owner']['login'],
+        dp.NODE_ID_CONTENT[node_id] = {'owner': node['owner']['login'],
                                     'name': node['name']}
     elif 'login' in node:
-        NODE_ID_CONTENT[node_id] = {'login': node['login']}
+        dp.NODE_ID_CONTENT[node_id] = {'login': node['login']}
 
 
 def bfs_users_star_repos(node_id, max_level):
@@ -193,29 +189,9 @@ def bfs_users_star_repos(node_id, max_level):
                     next_level_node_count += 1
 
 
-def save_data():
-    with open('REPOSITORY_STARGAZERS.json', 'w') as f:
-        json.dump(REPOSITORY_STARGAZERS, f)
-    with open('USER_STAR_REPOSITORIES.json', 'w') as f:
-        json.dump(USER_STAR_REPOSITORIES, f)
-    with open('NODE_ID_CONTENT.json', 'w') as f:
-        json.dump(NODE_ID_CONTENT, f)
-
-
-def load_data():
-    global REPOSITORY_STARGAZERS
-    global USER_STAR_REPOSITORIES
-    global NODE_ID_CONTENT
-    with open('REPOSITORY_STARGAZERS.json', 'r') as f:
-        REPOSITORY_STARGAZERS = json.load(f)
-    with open('USER_STAR_REPOSITORIES.json', 'r') as f:
-        USER_STAR_REPOSITORIES = json.load(f)
-    with open('NODE_ID_CONTENT.json', 'r') as f:
-        NODE_ID_CONTENT = json.load(f)
-
-
 if __name__ == '__main__':
+    dp.init()
     load_token()
-    load_data()
-    bfs_users_star_repos('MDEwOlJlcG9zaXRvcnkxMTc1MTM4NTI=', 3)
-    save_data()
+    dp.load_data(SEARCH_NODE_ID)
+    bfs_users_star_repos(SEARCH_NODE_ID, 3)
+    dp.save_data(SEARCH_NODE_ID)
