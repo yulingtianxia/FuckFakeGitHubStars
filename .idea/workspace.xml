@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5770a60d-ed83-4a03-9803-2dcb34c40c4d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/datapersistence.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/processingdata.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NODE_ID_CONTENT.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REPOSITORY_STARGAZERS.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/USER_STAR_REPOSITORIES.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fetchdata.py" beforeDir="false" afterPath="$PROJECT_DIR$/fetchdata.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/MDEwOlJlcG9zaXRvcnkxMTc1MTM4NTI=/NODE_ID_CONTENT.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/MDEwOlJlcG9zaXRvcnkxMTc1MTM4NTI=/NODE_ID_CONTENT.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/MDEwOlJlcG9zaXRvcnkxMTc1MTM4NTI=/USER_STAR_REPOSITORIES.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/MDEwOlJlcG9zaXRvcnkxMTc1MTM4NTI=/USER_STAR_REPOSITORIES.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,7 +13,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/FuckFakeGitHubStars$fetchdata.coverage" NAME="fetchdata Coverage Results" MODIFIED="1536682069876" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/FuckFakeGitHubStars$fetchdata.coverage" NAME="fetchdata Coverage Results" MODIFIED="1536714407348" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/FuckFakeGitHubStars$processingdata.coverage" NAME="processingdata Coverage Results" MODIFIED="1536679780807" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FUSProjectUsageTrigger">
@@ -65,8 +61,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/fetchdata.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="146">
-              <caret line="44" column="25" selection-start-line="44" selection-start-column="25" selection-end-line="44" selection-end-column="25" />
+            <state relative-caret-position="-1214">
+              <caret line="134" column="16" selection-start-line="134" selection-start-column="7" selection-end-line="134" selection-end-column="16" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -182,13 +178,18 @@
       <find>cocoadebug</find>
       <find>bfs current level:</find>
       <find>print</find>
-      <find>level:2</find>
       <find>data</find>
       <find>save</find>
       <find>load_d</find>
       <find>REPOSITORY_STARGAZERS</find>
       <find>fd.</find>
+      <find>USER_STAR_REPOSITORIES</find>
+      <find>level:2</find>
+      <find>save_data</find>
     </findStrings>
+    <replaceStrings>
+      <replace>dp.USER_STAR_REPOSITORIES</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -339,7 +340,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49879518" visible="true" weight="0.2532189" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -387,11 +387,6 @@
           <url>file://$PROJECT_DIR$/datapersistence.py</url>
           <line>32</line>
           <option name="timeStamp" value="33" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/fetchdata.py</url>
-          <line>85</line>
-          <option name="timeStamp" value="35" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -545,8 +540,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/fetchdata.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="44" column="25" selection-start-line="44" selection-start-column="25" selection-end-line="44" selection-end-column="25" />
+        <state relative-caret-position="-1214">
+          <caret line="134" column="16" selection-start-line="134" selection-start-column="7" selection-end-line="134" selection-end-column="16" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
