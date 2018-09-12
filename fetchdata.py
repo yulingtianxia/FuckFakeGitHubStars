@@ -1,5 +1,6 @@
 import requests
 import queue
+import time
 import datapersistence as dp
 
 GITHUB_API_URL = 'https://api.github.com/graphql'
@@ -24,6 +25,9 @@ def run_query(query):
 
 def get_user_stars(node_id):
 
+    if node_id in dp.USER_STAR_REPOSITORIES:
+        return dp.USER_STAR_REPOSITORIES[node_id]
+
     if node_id not in dp.NODE_ID_CONTENT:
         get_node_content(node_id)
 
@@ -31,17 +35,13 @@ def get_user_stars(node_id):
     if 'login' not in node_content:
         return None
 
-    if node_id in dp.USER_STAR_REPOSITORIES:
-        return dp.USER_STAR_REPOSITORIES[node_id]
-
     next_cursor = ''
     has_next = True
     all_star_repos = []
 
     def fetch_id_from_edge(edge):
         node = edge['node']
-        dp.NODE_ID_CONTENT[node['id']] = {'owner': node['owner']['login'],
-                                       'name': node['name']}
+        dp.NODE_ID_CONTENT[node['id']] = {'owner': node['owner']['login'], 'name': node['name']}
         return node['id']
 
     while has_next:
@@ -83,15 +83,15 @@ def get_user_stars(node_id):
 
 def get_repo_stargazers(node_id):
 
+    if node_id in dp.REPOSITORY_STARGAZERS:
+        return dp.REPOSITORY_STARGAZERS[node_id]
+
     if node_id not in dp.NODE_ID_CONTENT:
         get_node_content(node_id)
 
     node_content = dp.NODE_ID_CONTENT[node_id]
     if 'owner' not in node_content:
         return None
-
-    if node_id in dp.REPOSITORY_STARGAZERS:
-        return dp.REPOSITORY_STARGAZERS[node_id]
 
     next_cursor = ''
     has_next = True
@@ -155,8 +155,7 @@ def get_node_content(node_id):
     response = run_query(query_ql)
     node = response['data']['node']
     if 'owner' in node and 'name' in node:
-        dp.NODE_ID_CONTENT[node_id] = {'owner': node['owner']['login'],
-                                    'name': node['name']}
+        dp.NODE_ID_CONTENT[node_id] = {'owner': node['owner']['login'], 'name': node['name']}
     elif 'login' in node:
         dp.NODE_ID_CONTENT[node_id] = {'login': node['login']}
 
@@ -170,14 +169,9 @@ def bfs_users_star_repos(node_id, max_level):
     next_level_node_count = 0
     while not q.empty():
         current_node = q.get()
-        print('bfs current level:' + format(level) + ' current node:' + current_node)
-        current_level_node_count_left -= 1
-        if current_level_node_count_left == 0:
-            level += 1
-            current_level_node_count_left = next_level_node_count
-            next_level_node_count = 0
-            if level > max_level:
-                return
+        print(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+              + ' bfs current level:' + format(level)
+              + ' current node:' + current_node)
         result = get_user_stars(current_node)
         if result is None:
             result = get_repo_stargazers(current_node)
@@ -187,6 +181,14 @@ def bfs_users_star_repos(node_id, max_level):
                     visited.append(sub_node_id)
                     q.put(sub_node_id)
                     next_level_node_count += 1
+        current_level_node_count_left -= 1
+        if current_level_node_count_left == 0:
+            level += 1
+            if level > max_level:
+                return
+            current_level_node_count_left = next_level_node_count
+            next_level_node_count = 0
+
 
 
 if __name__ == '__main__':
