@@ -1,14 +1,12 @@
 import os.path
 import json
 
-
-def init():
-    global REPOSITORY_STARGAZERS
-    REPOSITORY_STARGAZERS = {}
-    global USER_STAR_REPOSITORIES
-    USER_STAR_REPOSITORIES = {}
-    global NODE_ID_CONTENT
-    NODE_ID_CONTENT = {}
+global REPOSITORY_STARGAZERS
+REPOSITORY_STARGAZERS = {}
+global USER_STAR_REPOSITORIES
+USER_STAR_REPOSITORIES = {}
+global NODE_ID_CONTENT
+NODE_ID_CONTENT = {}
 
 
 def create_file_if_not_exist(dir_path, file_name):

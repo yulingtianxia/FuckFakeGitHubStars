@@ -5,6 +5,7 @@ import datapersistence as dp
 
 GITHUB_API_URL = 'https://api.github.com/graphql'
 TOKEN = ''
+global SEARCH_NODE_ID
 SEARCH_NODE_ID = 'MDEwOlJlcG9zaXRvcnkxMTc1MTM4NTI='
 
 
@@ -192,7 +193,6 @@ def bfs_users_star_repos(node_id, max_level):
 
 
 if __name__ == '__main__':
-    dp.init()
     load_token()
     dp.load_data(SEARCH_NODE_ID)
     bfs_users_star_repos(SEARCH_NODE_ID, 2)
