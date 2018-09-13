@@ -171,7 +171,8 @@ def bfs_users_star_repos(node_id, max_level):
         current_node = q.get()
         print(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
               + ' bfs current level:' + format(level)
-              + ' current node:' + current_node)
+              + ' current node:' + current_node
+              + ' ' + format(current_level_node_count_left) + ' nodes left')
         result = get_user_stars(current_node)
         if result is None:
             result = get_repo_stargazers(current_node)
@@ -190,10 +191,9 @@ def bfs_users_star_repos(node_id, max_level):
             next_level_node_count = 0
 
 
-
 if __name__ == '__main__':
     dp.init()
     load_token()
     dp.load_data(SEARCH_NODE_ID)
-    bfs_users_star_repos(SEARCH_NODE_ID, 3)
+    bfs_users_star_repos(SEARCH_NODE_ID, 2)
     dp.save_data(SEARCH_NODE_ID)

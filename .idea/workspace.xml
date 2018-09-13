@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5770a60d-ed83-4a03-9803-2dcb34c40c4d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/MDEwOlJlcG9zaXRvcnkxMTc1MTM4NTI=/NODE_ID_CONTENT.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/MDEwOlJlcG9zaXRvcnkxMTc1MTM4NTI=/NODE_ID_CONTENT.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/MDEwOlJlcG9zaXRvcnkxMTc1MTM4NTI=/REPOSITORY_STARGAZERS.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/MDEwOlJlcG9zaXRvcnkxMTc1MTM4NTI=/REPOSITORY_STARGAZERS.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/MDEwOlJlcG9zaXRvcnkxMTc1MTM4NTI=/USER_STAR_REPOSITORIES.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/MDEwOlJlcG9zaXRvcnkxMTc1MTM4NTI=/USER_STAR_REPOSITORIES.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fetchdata.py" beforeDir="false" afterPath="$PROJECT_DIR$/fetchdata.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/processingdata.py" beforeDir="false" afterPath="$PROJECT_DIR$/processingdata.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,6 +17,7 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/FuckFakeGitHubStars$fetchdata.coverage" NAME="fetchdata Coverage Results" MODIFIED="1536761093699" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/FuckFakeGitHubStars$processingdata.coverage" NAME="processingdata Coverage Results" MODIFIED="1536679780807" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/FuckFakeGitHubStars$plot_cluster_comparison.coverage" NAME="plot_cluster_comparison Coverage Results" MODIFIED="1536765562442" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="1172614339">
@@ -29,7 +31,7 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="json" value="1" />
-          <entry key="py" value="18" />
+          <entry key="py" value="23" />
           <entry key="token" value="1" />
         </counts>
       </usages-collector>
@@ -37,18 +39,18 @@
         <counts>
           <entry key="JSON" value="1" />
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Python" value="18" />
+          <entry key="Python" value="23" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Python Console" value="21" />
-          <entry key="py" value="4195" />
+          <entry key="py" value="4311" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="4216" />
+          <entry key="Python" value="4332" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
@@ -59,11 +61,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fetchdata.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="187" column="22" selection-start-line="187" selection-start-column="22" selection-end-line="187" selection-end-column="22" />
+            <state relative-caret-position="276">
+              <caret line="86" column="29" selection-start-line="86" selection-start-column="29" selection-end-line="86" selection-end-column="29" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -72,10 +74,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file:///usr/local/lib/python3.6/site-packages/sklearn/cluster/spectral.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="11040">
+              <caret line="460" column="17" selection-start-line="460" selection-start-column="17" selection-end-line="460" selection-end-column="17" />
+              <folding>
+                <element signature="e#206#221#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/datapersistence.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1080">
-              <caret line="45" column="24" selection-start-line="45" selection-start-column="24" selection-end-line="45" selection-end-column="24" />
+            <state relative-caret-position="72">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
                 <marker date="1536681973060" expanded="true" signature="40:225" ph="..." />
@@ -88,11 +102,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/processingdata.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="12" column="16" selection-start-line="7" selection-start-column="4" selection-end-line="12" selection-end-column="16" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="48">
+              <caret line="2" selection-start-line="2" selection-end-line="2" />
             </state>
           </provider>
         </entry>
@@ -102,15 +113,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="427">
               <caret line="310" selection-start-line="310" selection-end-line="310" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file:///usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python3.6/json/decoder.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="8496">
-              <caret line="356" selection-start-line="356" selection-end-line="356" />
             </state>
           </provider>
         </entry>
@@ -162,11 +164,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>node</find>
-      <find>all_stargazers</find>
-      <find>GITHUB_API_URL</find>
-      <find>'node':</find>
-      <find>]</find>
       <find>repo</find>
       <find>:</find>
       <find>next_cursor</find>
@@ -182,14 +179,21 @@
       <find>save</find>
       <find>load_d</find>
       <find>REPOSITORY_STARGAZERS</find>
-      <find>fd.</find>
       <find>USER_STAR_REPOSITORIES</find>
       <find>save_data</find>
       <find>get_node_content</find>
       <find>NODE_ID_CONTENT</find>
       <find>level:</find>
       <find>level</find>
+      <find>n_clusters</find>
+      <find>arpack</find>
+      <find>spectral</find>
+      <find>algorithm</find>
       <find>level:2</find>
+      <find>level:3</find>
+      <find>affinity</find>
+      <find>current_level_node_count_left</find>
+      <find>fd.</find>
     </findStrings>
     <replaceStrings>
       <replace>dp.USER_STAR_REPOSITORIES</replace>
@@ -202,9 +206,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/token" />
+        <option value="$PROJECT_DIR$/fetchdata.py" />
         <option value="$PROJECT_DIR$/processingdata.py" />
         <option value="$PROJECT_DIR$/datapersistence.py" />
-        <option value="$PROJECT_DIR$/fetchdata.py" />
       </list>
     </option>
   </component>
@@ -273,7 +277,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.fetchdata">
+  <component name="RunManager" selected="Python.plot_cluster_comparison">
     <configuration name="fetchdata" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="FuckFakeGitHubStars" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -288,6 +292,28 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/fetchdata.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="plot_cluster_comparison" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="FuckFakeGitHubStars" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/plot_cluster_comparison.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -321,9 +347,11 @@
     <list>
       <item itemvalue="Python.fetchdata" />
       <item itemvalue="Python.processingdata" />
+      <item itemvalue="Python.plot_cluster_comparison" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.plot_cluster_comparison" />
         <item itemvalue="Python.fetchdata" />
         <item itemvalue="Python.processingdata" />
       </list>
@@ -344,14 +372,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49879518" visible="true" weight="0.14592275" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49879518" visible="true" weight="0.14592275" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.50120485" side_tool="true" weight="0.24964234" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32961586" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49928468" visible="true" weight="0.25526643" />
-      <window_info anchor="bottom" x="0" y="590" width="1398" height="175" id="Debug" order="3" weight="0.24783148" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49928468" visible="true" weight="0.25526643" />
+      <window_info anchor="bottom" x="0" y="590" width="1398" height="175" id="Debug" order="3" weight="0.3804213" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -364,7 +393,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="SciView" order="3" weight="0.3297568" />
       <window_info anchor="right" id="Database" order="4" />
     </layout>
   </component>
@@ -379,13 +408,8 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/processingdata.py</url>
-          <line>11</line>
+          <line>4</line>
           <option name="timeStamp" value="28" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/processingdata.py</url>
-          <line>8</line>
-          <option name="timeStamp" value="30" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/datapersistence.py</url>
@@ -520,34 +544,58 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/Downloads/plot_cluster_comparison.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2037">
+          <caret line="115" column="37" selection-start-line="115" selection-start-column="27" selection-end-line="115" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python3.6/site-packages/sklearn/cluster/spectral.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11040">
+          <caret line="460" column="17" selection-start-line="460" selection-start-column="17" selection-end-line="460" selection-end-column="17" />
+          <folding>
+            <element signature="e#206#221#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plot_cluster_comparison.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2250">
+          <caret line="116" column="11" lean-forward="true" selection-start-line="116" selection-start-column="11" selection-end-line="116" selection-end-column="11" />
+          <folding>
+            <element signature="e#962#973#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/processingdata.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="12" column="16" selection-start-line="7" selection-start-column="4" selection-end-line="12" selection-end-column="16" />
+        <state relative-caret-position="48">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fetchdata.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="86" column="29" selection-start-line="86" selection-start-column="29" selection-end-line="86" selection-end-column="29" />
           <folding>
-            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/datapersistence.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1080">
-          <caret line="45" column="24" selection-start-line="45" selection-start-column="24" selection-end-line="45" selection-end-column="24" />
+        <state relative-caret-position="72">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
             <marker date="1536681973060" expanded="true" signature="40:225" ph="..." />
             <marker date="1536681973060" expanded="true" signature="529:773" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fetchdata.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="187" column="22" selection-start-line="187" selection-start-column="22" selection-end-line="187" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
