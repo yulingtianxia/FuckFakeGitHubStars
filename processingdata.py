@@ -29,12 +29,7 @@ def cluster_data(data):
             else:
                 similarity = dp.NODE_ID_CONTENT[node_a]['similarity'][node_b]
             if similarity >= CLUSTER_SIMILARITY:
-                dp.NODE_ID_CONTENT[node_b]['cluster'] = node_a
-    clusters = {}
-    for node, content in dp.NODE_ID_CONTENT.items():
-        if 'cluster' in content:
-            clusters[content['cluster']] = content
-    print(clusters)
+                dp.NODE_ID_CONTENT[node_b]['cluster'] = dp.NODE_ID_CONTENT[node_a]['cluster']
 
 
 if __name__ == '__main__':
@@ -42,4 +37,13 @@ if __name__ == '__main__':
     cluster_data(dp.USER_STAR_REPOSITORIES)
     cluster_data(dp.REPOSITORY_STARGAZERS)
     dp.save_data(fd.SEARCH_NODE_ID)
+    clusters = {}
+    for node, content in dp.NODE_ID_CONTENT.items():
+        if 'cluster' in content:
+            if content['cluster'] not in clusters:
+                clusters[content['cluster']] = []
+            clusters[content['cluster']].append(node)
+    for cluster in clusters.values():
+        if len(cluster) > 100:
+            print(cluster)
 
