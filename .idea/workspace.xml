@@ -3,7 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="5770a60d-ed83-4a03-9803-2dcb34c40c4d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/MDEwOlJlcG9zaXRvcnkxMTc1MTM4NTI=/NODE_ID_CONTENT.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/MDEwOlJlcG9zaXRvcnkxMTc1MTM4NTI=/NODE_ID_CONTENT.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/MDEwOlJlcG9zaXRvcnkxMTc1MTM4NTI=/NODE_ID_CONTENT.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/MDEwOlJlcG9zaXRvcnkxMTc1MTM4NTI=/REPOSITORY_STARGAZERS.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/MDEwOlJlcG9zaXRvcnkxMTc1MTM4NTI=/USER_STAR_REPOSITORIES.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datapersistence.py" beforeDir="false" afterPath="$PROJECT_DIR$/datapersistence.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fetchdata.py" beforeDir="false" afterPath="$PROJECT_DIR$/fetchdata.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/processingdata.py" beforeDir="false" afterPath="$PROJECT_DIR$/processingdata.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -13,8 +17,8 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/FuckFakeGitHubStars$fetchdata.coverage" NAME="fetchdata Coverage Results" MODIFIED="1536761093699" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/FuckFakeGitHubStars$processingdata.coverage" NAME="processingdata Coverage Results" MODIFIED="1536862621803" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/FuckFakeGitHubStars$fetchdata.coverage" NAME="fetchdata Coverage Results" MODIFIED="1537007195687" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/FuckFakeGitHubStars$processingdata.coverage" NAME="processingdata Coverage Results" MODIFIED="1537021034531" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/FuckFakeGitHubStars$plot_cluster_comparison.coverage" NAME="plot_cluster_comparison Coverage Results" MODIFIED="1536765562442" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FUSProjectUsageTrigger">
@@ -30,7 +34,7 @@
         <counts>
           <entry key="gitignore" value="1" />
           <entry key="json" value="1" />
-          <entry key="py" value="29" />
+          <entry key="py" value="30" />
           <entry key="token" value="1" />
         </counts>
       </usages-collector>
@@ -38,21 +42,22 @@
         <counts>
           <entry key="JSON" value="1" />
           <entry key="PLAIN_TEXT" value="2" />
-          <entry key="Python" value="29" />
+          <entry key="Python" value="30" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Python Console" value="21" />
-          <entry key="py" value="5325" />
+          <entry key="py" value="7299" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="5346" />
+          <entry key="Python" value="7320" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
+      <usages-collector id="statistics.vcs.git.usages" />
     </session>
   </component>
   <component name="FavoritesManager">
@@ -63,8 +68,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fetchdata.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="141">
-              <caret line="128" column="24" selection-start-line="128" selection-start-column="20" selection-end-line="128" selection-end-column="24" />
+            <state relative-caret-position="87">
+              <caret line="192" selection-start-line="192" selection-end-line="192" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -75,12 +80,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/datapersistence.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="693">
-              <caret line="52" selection-start-line="52" selection-end-line="52" />
+            <state relative-caret-position="1141">
+              <caret line="58" column="30" selection-start-line="58" selection-start-column="30" selection-end-line="58" selection-end-column="30" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
-                <marker date="1536853513826" expanded="true" signature="186:188" ph="..." />
-                <marker date="1536853513826" expanded="true" signature="492:736" ph="..." />
+                <marker date="1537013652938" expanded="true" signature="220:222" ph="..." />
+                <marker date="1537013652938" expanded="true" signature="519:805" ph="..." />
               </folding>
             </state>
           </provider>
@@ -94,12 +99,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/processingdata.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="309">
-              <caret line="35" column="29" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="29" />
+            <state relative-caret-position="1675">
+              <caret line="89" column="26" selection-start-line="89" selection-start-column="26" selection-end-line="89" selection-end-column="26" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
-                <marker date="1536864107615" expanded="true" signature="121:240" ph="..." />
-                <marker date="1536864107615" expanded="true" signature="287:1288" ph="..." />
+                <marker date="1537020984999" expanded="true" signature="121:240" ph="..." />
+                <marker date="1537020984999" expanded="true" signature="3900:3975" ph="..." />
               </folding>
             </state>
           </provider>
@@ -116,9 +121,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>next_cursor</find>
-      <find>'owner':</find>
-      <find>login</find>
       <find>owner</find>
       <find>json</find>
       <find>fetch_id_from_edge</find>
@@ -145,7 +147,10 @@
       <find>for</find>
       <find>affinity</find>
       <find>list</find>
+      <find>,</find>
+      <find>readli</find>
       <find>print</find>
+      <find>SEARCH_NODE_ID</find>
     </findStrings>
     <replaceStrings>
       <replace>dp.USER_STAR_REPOSITORIES</replace>
@@ -158,9 +163,10 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/token" />
+        <option value="$PROJECT_DIR$/download_images.py" />
         <option value="$PROJECT_DIR$/datapersistence.py" />
-        <option value="$PROJECT_DIR$/fetchdata.py" />
         <option value="$PROJECT_DIR$/processingdata.py" />
+        <option value="$PROJECT_DIR$/fetchdata.py" />
       </list>
     </option>
   </component>
@@ -304,8 +310,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.processingdata" />
-        <item itemvalue="Python.plot_cluster_comparison" />
         <item itemvalue="Python.fetchdata" />
+        <item itemvalue="Python.plot_cluster_comparison" />
       </list>
     </recent_temporary>
   </component>
@@ -331,8 +337,8 @@
       <window_info id="Favorites" order="2" sideWeight="0.50120485" side_tool="true" weight="0.24964234" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32961586" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49928468" weight="0.3519207" />
-      <window_info active="true" anchor="bottom" x="0" y="590" width="1398" height="175" id="Debug" order="3" visible="true" weight="0.25154895" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49928468" visible="true" weight="0.4126394" />
+      <window_info anchor="bottom" x="0" y="590" width="1398" height="175" id="Debug" order="3" weight="0.23420075" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -368,6 +374,11 @@
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>dp.NODE_ID_CONTENT[node]['similarity']</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>dp.NODE_ID_CONTENT['MDQ6VXNlcjQwNTUyMTc3']</expression-string>
         <language-id>Python</language-id>
@@ -405,11 +416,6 @@
       </expression>
       <expression>
         <expression-string>nodes[1]</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>nodes[0]</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
@@ -510,16 +516,6 @@
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/fetchdata.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="128" column="24" selection-start-line="128" selection-start-column="20" selection-end-line="128" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Library/Caches/PyCharm2018.2/python_stubs/1025205290/builtins.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="173">
@@ -534,26 +530,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/download_images.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/datapersistence.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="693">
-          <caret line="52" selection-start-line="52" selection-end-line="52" />
+        <state relative-caret-position="1141">
+          <caret line="58" column="30" selection-start-line="58" selection-start-column="30" selection-end-line="58" selection-end-column="30" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
-            <marker date="1536853513826" expanded="true" signature="186:188" ph="..." />
-            <marker date="1536853513826" expanded="true" signature="492:736" ph="..." />
+            <marker date="1537013652938" expanded="true" signature="220:222" ph="..." />
+            <marker date="1537013652938" expanded="true" signature="519:805" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fetchdata.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="192" selection-start-line="192" selection-end-line="192" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/processingdata.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="35" column="29" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="29" />
+        <state relative-caret-position="1675">
+          <caret line="89" column="26" selection-start-line="89" selection-start-column="26" selection-end-line="89" selection-end-column="26" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
-            <marker date="1536864107615" expanded="true" signature="121:240" ph="..." />
-            <marker date="1536864107615" expanded="true" signature="287:1288" ph="..." />
+            <marker date="1537020984999" expanded="true" signature="121:240" ph="..." />
+            <marker date="1537020984999" expanded="true" signature="3900:3975" ph="..." />
           </folding>
         </state>
       </provider>

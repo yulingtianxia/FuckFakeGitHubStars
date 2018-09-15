@@ -78,7 +78,7 @@ def get_user_stars(node_id):
             has_next = page_info['hasNextPage']
 
     dp.USER_STAR_REPOSITORIES[node_id] = all_star_repos
-    dp.save_data(SEARCH_NODE_ID)
+    dp.save_data()
     return all_star_repos
 
 
@@ -133,7 +133,7 @@ def get_repo_stargazers(node_id):
             has_next = page_info['hasNextPage']
 
     dp.REPOSITORY_STARGAZERS[node_id] = all_stargazers
-    dp.save_data(SEARCH_NODE_ID)
+    dp.save_data()
     return all_stargazers
 
 
@@ -194,6 +194,6 @@ def bfs_users_star_repos(node_id, max_level):
 
 if __name__ == '__main__':
     load_token()
-    dp.load_data(SEARCH_NODE_ID)
+    dp.load_data()
     bfs_users_star_repos(SEARCH_NODE_ID, 2)
-    dp.save_data(SEARCH_NODE_ID)
+    dp.save_data()
