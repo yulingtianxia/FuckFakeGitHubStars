@@ -41,6 +41,8 @@ def get_user_stars(node_id):
     all_star_repos = []
 
     def fetch_id_from_edge(edge):
+        if edge is None:
+            return None
         node = edge['node']
         dp.NODE_ID_CONTENT[node['id']] = {'owner': node['owner']['login'], 'name': node['name']}
         return node['id']
@@ -68,14 +70,18 @@ def get_user_stars(node_id):
                 }
                 '''
         response = run_query(query_ql)
-        if response is not None:
+        if response['data']['user'] is not None:
             repos = response['data']['user']['starredRepositories']
             edges = repos['edges']
-            nodes = list(map(fetch_id_from_edge, edges))
-            all_star_repos += nodes
+            if len(edges) > 0:
+                nodes = list(map(fetch_id_from_edge, edges))
+                all_star_repos += nodes
             page_info = repos['pageInfo']
             next_cursor = ', after: \"' + page_info['endCursor'] + '\"'
             has_next = page_info['hasNextPage']
+        else:
+            get_node_content(node_id)
+            node_content = dp.NODE_ID_CONTENT[node_id]
 
     dp.USER_STAR_REPOSITORIES[node_id] = all_star_repos
     dp.save_data()
@@ -99,6 +105,8 @@ def get_repo_stargazers(node_id):
     all_stargazers = []
 
     def fetch_id_from_edge(edge):
+        if edge is None:
+            return None
         node = edge['node']
         dp.NODE_ID_CONTENT[node['id']] = {'login': node['login']}
         return node['id']
@@ -123,14 +131,18 @@ def get_repo_stargazers(node_id):
             }
             '''
         response = run_query(query_ql)
-        if response is not None:
+        if response['data']['repository'] is not None:
             stargazers = response['data']['repository']['stargazers']
             edges = stargazers['edges']
-            nodes = list(map(fetch_id_from_edge, edges))
-            all_stargazers += nodes
+            if len(edges) > 0:
+                nodes = list(map(fetch_id_from_edge, edges))
+                all_stargazers += nodes
             page_info = stargazers['pageInfo']
             next_cursor = ', after: \"' + page_info['endCursor'] + '\"'
             has_next = page_info['hasNextPage']
+        else:
+            get_node_content(node_id)
+            node_content = dp.NODE_ID_CONTENT[node_id]
 
     dp.REPOSITORY_STARGAZERS[node_id] = all_stargazers
     dp.save_data()
@@ -179,7 +191,7 @@ def bfs_users_star_repos(node_id, max_level):
             result = get_repo_stargazers(current_node)
         if result is not None:
             for sub_node_id in result:
-                if sub_node_id not in visited:
+                if sub_node_id is not None and sub_node_id not in visited:
                     visited.append(sub_node_id)
                     q.put(sub_node_id)
                     next_level_node_count += 1

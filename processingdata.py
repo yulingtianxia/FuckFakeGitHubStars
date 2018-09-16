@@ -1,5 +1,6 @@
 import datapersistence as dp
 import fetchdata as fd
+import time
 
 CLUSTER_SIMILARITY = 0.5
 
@@ -48,13 +49,15 @@ def generate_blacklist():
                 for node in cluster_content:
                     cluster_content_list = dp.USER_STAR_REPOSITORIES[node]
                     if len(cluster_content_list) < 100:
-                        dp.BLACK_LIST.append(node)
+                        if node not in dp.BLACK_LIST:
+                            dp.BLACK_LIST.append(node)
                         cluster_description += 'user login name: ' + \
                                                dp.NODE_ID_CONTENT[node]['login'] + \
-                                               ' star num: ' + \
+                                               '; star num: ' + \
                                                format(len(cluster_content_list)) + \
                                                '\n'
-                cluster_description += '===============================\n\n'
+                if len(cluster_description) > 0:
+                    cluster_description += '===============================\n\n'
         log += cluster_description
     blacklist_set = set(dp.BLACK_LIST)
     for cluster_id, cluster_content in clusters.items():
@@ -70,15 +73,16 @@ def generate_blacklist():
                                            dp.NODE_ID_CONTENT[node]['owner'] + \
                                            '/' + \
                                            dp.NODE_ID_CONTENT[node]['name'] + \
-                                           ' stargazer num: ' + \
+                                           '; stargazer num: ' + \
                                            format(len(cluster_content_list)) +\
-                                           ' black percent:' + \
+                                           '; black percent:' + \
                                            format(black_percent) + \
                                            '\n'
-            cluster_description += '===============================\n\n'
+            if len(cluster_description) > 0:
+                cluster_description += '===============================\n\n'
         log += cluster_description
     dir_path = 'data/'
-    with open(dir_path + 'blacklist.log', 'wt') as f:
+    with open(dir_path + time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()) + '_blacklist.log', 'wt') as f:
         f.write(log)
 
 
