@@ -82,6 +82,7 @@ def get_user_stars(node_id):
         else:
             get_node_content(node_id)
             node_content = dp.NODE_ID_CONTENT[node_id]
+            has_next = False
 
     dp.USER_STAR_REPOSITORIES[node_id] = all_star_repos
     dp.save_data()
@@ -143,6 +144,7 @@ def get_repo_stargazers(node_id):
         else:
             get_node_content(node_id)
             node_content = dp.NODE_ID_CONTENT[node_id]
+            has_next = False
 
     dp.REPOSITORY_STARGAZERS[node_id] = all_stargazers
     dp.save_data()
