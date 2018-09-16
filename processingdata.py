@@ -87,7 +87,8 @@ def generate_blacklist():
 
 
 def search_blacklist():
-    for user in dp.BLACK_LIST:
+    for index, user in enumerate(dp.BLACK_LIST):
+        print('search_blacklist, index: ' + format(index) + ', user: ' + user)
         fd.bfs_users_star_repos(user, 2)
 
 

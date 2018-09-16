@@ -4,7 +4,7 @@ import time
 import datapersistence as dp
 
 GITHUB_API_URL = 'https://api.github.com/graphql'
-TOKEN = ''
+TOKEN = 'use your own token'
 global SEARCH_NODE_ID
 SEARCH_NODE_ID = 'MDEwOlJlcG9zaXRvcnkxMTc1MTM4NTI='
 
