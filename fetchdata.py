@@ -6,7 +6,7 @@ import datapersistence as dp
 GITHUB_API_URL = 'https://api.github.com/graphql'
 TOKEN = 'use your own token'
 global SEARCH_NODE_ID
-SEARCH_NODE_ID = 'MDEwOlJlcG9zaXRvcnkxMTc1MTM4NTI='
+SEARCH_NODE_ID = 'MDEwOlJlcG9zaXRvcnk2MzE0ODcxNQ=='
 
 
 def load_token():
@@ -31,6 +31,8 @@ def get_user_stars(node_id):
 
     if node_id not in dp.NODE_ID_CONTENT:
         get_node_content(node_id)
+        if node_id not in dp.NODE_ID_CONTENT:
+            return None
 
     node_content = dp.NODE_ID_CONTENT[node_id]
     if 'login' not in node_content:
@@ -96,6 +98,8 @@ def get_repo_stargazers(node_id):
 
     if node_id not in dp.NODE_ID_CONTENT:
         get_node_content(node_id)
+        if node_id not in dp.NODE_ID_CONTENT:
+            return None
 
     node_content = dp.NODE_ID_CONTENT[node_id]
     if 'owner' not in node_content:
@@ -173,6 +177,8 @@ def get_node_content(node_id):
         dp.NODE_ID_CONTENT[node_id] = {'owner': node['owner']['login'], 'name': node['name']}
     elif 'login' in node:
         dp.NODE_ID_CONTENT[node_id] = {'login': node['login']}
+    else:
+        print('node id: ' + node_id + ' not found')
 
 
 def bfs_users_star_repos(node_id, max_level):
@@ -197,6 +203,7 @@ def bfs_users_star_repos(node_id, max_level):
                     visited.append(sub_node_id)
                     q.put(sub_node_id)
                     next_level_node_count += 1
+
         current_level_node_count_left -= 1
         if current_level_node_count_left == 0:
             level += 1
