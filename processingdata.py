@@ -12,9 +12,19 @@ def calculate_similarity(list_a, list_b):
 
 
 def cluster_data(data):
-    nodes = data.keys()
+    nodes = list(data.keys())
+    nodes_need_remove = []
     for node in nodes:
-        dp.NODE_ID_CONTENT[node]['cluster'] = node
+        if node not in dp.NODE_ID_CONTENT:
+            fd.get_node_content(node)
+            dp.save_data()
+        if node not in dp.NODE_ID_CONTENT:
+            nodes_need_remove.append(node)
+        else:
+            dp.NODE_ID_CONTENT[node]['cluster'] = node
+    for node_remove in nodes_need_remove:
+        nodes.remove(node_remove)
+
     for i, node_a in enumerate(nodes):
         for j, node_b in enumerate(nodes):
             if j <= i:
@@ -45,7 +55,7 @@ def generate_blacklist():
     for cluster_id, cluster_content in clusters.items():
         cluster_description = ''
         if 'login' in dp.NODE_ID_CONTENT[cluster_id]:
-            if len(cluster_content) > 100:
+            if len(cluster_content) > 50:
                 for node in cluster_content:
                     cluster_content_list = dp.USER_STAR_REPOSITORIES[node]
                     if len(cluster_content_list) < 100:

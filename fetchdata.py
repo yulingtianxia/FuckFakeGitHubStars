@@ -173,6 +173,8 @@ def get_node_content(node_id):
         '''
     response = run_query(query_ql)
     node = response['data']['node']
+    if node is None:
+        return
     if 'owner' in node and 'name' in node:
         dp.NODE_ID_CONTENT[node_id] = {'owner': node['owner']['login'], 'name': node['name']}
     elif 'login' in node:
